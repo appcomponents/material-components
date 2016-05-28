@@ -33,6 +33,8 @@ import input from '../../../mixins/input';
     template: require('./option.html')
 })
 export default class SelectOption {
+    private _slotContents: any;
+
     private $dispatch: any;
     private $parent: any;
 
@@ -44,6 +46,10 @@ export default class SelectOption {
         return {
             active: false
         }
+    }
+
+    get content() {
+        return this._slotContents ? this._slotContents.default : '';
     }
 
     get multiple() {

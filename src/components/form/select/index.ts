@@ -87,9 +87,9 @@ export default class SelectField {
     }
 
     createOption(option: any) {
-        var content = option._slotContents ? option._slotContents.default : '';
-        var value = option.$data.value;
-        var disabled = option.$data.disabled;
+        var content = option.content;
+        var value = option.value;
+        var disabled = option.disabled;
 
         return {
             content: content.textContent,

@@ -3398,6 +3398,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	            active: false
 	        };
 	    };
+	    Object.defineProperty(SelectOption.prototype, "content", {
+	        get: function get() {
+	            return this._slotContents ? this._slotContents["default"] : '';
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(SelectOption.prototype, "multiple", {
 	        get: function get() {
 	            return this.$parent.multiple;
@@ -3646,9 +3653,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.refreshDropdownOptions();
 	    };
 	    SelectField.prototype.createOption = function (option) {
-	        var content = option._slotContents ? option._slotContents["default"] : '';
-	        var value = option.$data.value;
-	        var disabled = option.$data.disabled;
+	        var content = option.content;
+	        var value = option.value;
+	        var disabled = option.disabled;
 	        return {
 	            content: content.textContent,
 	            value: value,
