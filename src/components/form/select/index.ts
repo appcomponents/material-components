@@ -5,8 +5,6 @@ import inputMixin from '../../../mixins/input';
 import clickAway from '../../../directives/click-away';
 import bindBoolean from '../../../directives/bind-boolean';
 
-var Vue: any = require('vue');
-
 @Component({
     props: {
         value: {

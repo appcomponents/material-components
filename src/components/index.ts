@@ -1,6 +1,4 @@
 import ComponentOption = vuejs.ComponentOption;
-import VueModule = require('vue');
-var Vue: any = VueModule;
 
 import directives from '../directives';
 import mixins from '../mixins';

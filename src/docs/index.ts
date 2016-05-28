@@ -2,7 +2,6 @@
 /// <reference path="../typings/ts.d.ts"/>
 /// <reference path="../typings/doc.d.ts"/>
 
-var Vue: any = require('vue');
 var VueRouter: any = require('vue-router')
 
 import mapping = require('./mapping');

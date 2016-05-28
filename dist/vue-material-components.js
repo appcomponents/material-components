@@ -7,7 +7,7 @@
 		exports["VueMaterialComponents"] = factory(require("Vue"));
 	else
 		root["VueMaterialComponents"] = factory(root["Vue"]);
-})(this, function(__WEBPACK_EXTERNAL_MODULE_2__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_19__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -56,8 +56,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	"use strict";
 	var components_1 = __webpack_require__(1);
-	var directives_1 = __webpack_require__(3);
-	var mixins_1 = __webpack_require__(10);
+	var directives_1 = __webpack_require__(2);
+	var mixins_1 = __webpack_require__(9);
 	module.exports = {
 	    install: function (Vue) {
 	        for (var componentName in components_1.default) {
@@ -78,11 +78,9 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var VueModule = __webpack_require__(2);
-	var Vue = VueModule;
-	var directives_1 = __webpack_require__(3);
-	var mixins_1 = __webpack_require__(10);
-	var badge_1 = __webpack_require__(18);
+	var directives_1 = __webpack_require__(2);
+	var mixins_1 = __webpack_require__(9);
+	var badge_1 = __webpack_require__(17);
 	var button_1 = __webpack_require__(21);
 	var breadcrumbs_1 = __webpack_require__(25);
 	var card_1 = __webpack_require__(33);
@@ -181,20 +179,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 2 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_2__;
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var bind_boolean_1 = __webpack_require__(4);
-	var bind_raw_1 = __webpack_require__(5);
-	var click_away_1 = __webpack_require__(6);
-	var slot_1 = __webpack_require__(7);
-	var wave_effect_1 = __webpack_require__(8);
+	var bind_boolean_1 = __webpack_require__(3);
+	var bind_raw_1 = __webpack_require__(4);
+	var click_away_1 = __webpack_require__(5);
+	var slot_1 = __webpack_require__(6);
+	var wave_effect_1 = __webpack_require__(7);
 	var directives = {
 	    bindBoolean: bind_boolean_1['default'],
 	    bindRaw: bind_raw_1['default'],
@@ -207,7 +199,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -228,7 +220,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -252,12 +244,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/* 5 */
+/***/ function(module, exports) {
 
 	"use strict";
-	var VueModule = __webpack_require__(2);
-	var vue = VueModule;
 	var onClickAway = {
 	    acceptStatement: true,
 	    update: function update(handler) {
@@ -272,10 +262,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return res;
 	            }
 	        };
-	        vue.util.on(document.documentElement, 'click', this.handler);
+	        Vue.util.on(document.documentElement, 'click', this.handler);
 	    },
 	    reset: function reset() {
-	        vue.util.off(document.documentElement, 'click', this.handler);
+	        Vue.util.off(document.documentElement, 'click', this.handler);
 	    },
 	    unbind: function unbind() {
 	        this.reset();
@@ -286,7 +276,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -308,11 +298,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var effect_1 = __webpack_require__(9);
+	var effect_1 = __webpack_require__(8);
 	var waveEffect = {
 	    bind: function bind() {
 	        var _this = this;
@@ -337,7 +327,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -511,20 +501,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var events_1 = __webpack_require__(11);
-	var input_1 = __webpack_require__(12);
-	var toast_1 = __webpack_require__(13);
-	var tooltip_1 = __webpack_require__(16);
+	var events_1 = __webpack_require__(10);
+	var input_1 = __webpack_require__(11);
+	var toast_1 = __webpack_require__(12);
+	var tooltip_1 = __webpack_require__(15);
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports['default'] = [events_1['default'], input_1['default'], toast_1['default'], tooltip_1['default']];
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -544,7 +534,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -572,11 +562,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var toast_1 = __webpack_require__(14);
+	var toast_1 = __webpack_require__(13);
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports["default"] = {
 	    methods: {
@@ -588,11 +578,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Vel = __webpack_require__(15);
+	var Vel = __webpack_require__(14);
 	/*!
 	 * Materialize v0.97.5 (http://materializecss.com)
 	 * Copyright 2014-2015 Materialize
@@ -706,7 +696,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*! VelocityJS.org (1.2.3). (C) 2014 Julian Shapiro. MIT @license: en.wikipedia.org/wiki/MIT_License */ /*************************
@@ -1186,11 +1176,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                       then the DOM is queried for the element's current values as a last resort. */ /* Note: Conversely, animation reversal (and looping) *always* perform inter-call value transfers; they never requery the DOM. */
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var tooltip_1 = __webpack_require__(17);
+	var tooltip_1 = __webpack_require__(16);
 	Object.defineProperty(exports, "__esModule", { value: true });
 	exports["default"] = {
 	    methods: {
@@ -1203,11 +1193,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Velocity = __webpack_require__(15);
+	var Velocity = __webpack_require__(14);
 	function getOffset(element) {
 	    var top = 0,
 	        left = 0;
@@ -1376,7 +1366,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1387,7 +1377,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Badge = (function () {
 	    function Badge() {}
 	    Badge = __decorate([vue_class_component_1["default"]({
@@ -1408,7 +1398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1417,7 +1407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 
-	var Vue = __webpack_require__(2);
+	var Vue = __webpack_require__(19);
 
 	var internalHooks = ['data', 'el', 'init', 'created', 'ready', 'beforeCompile', 'compiled', 'beforeDestroy', 'destroyed', 'attached', 'detached', 'activate'];
 
@@ -1467,6 +1457,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = decorator;
 
 /***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_19__;
+
+/***/ },
 /* 20 */
 /***/ function(module, exports) {
 
@@ -1484,9 +1480,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var icon_1 = __webpack_require__(22);
-	var wave_effect_1 = __webpack_require__(8);
+	var wave_effect_1 = __webpack_require__(7);
 	var Button = (function () {
 	    function Button() {}
 	    Object.defineProperty(Button.prototype, "computedClasses", {
@@ -1567,7 +1563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Icon = (function () {
 	    function Icon() {}
 	    Icon = __decorate([vue_class_component_1["default"]({
@@ -1615,7 +1611,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var navbar_1 = __webpack_require__(26);
 	var Breadcrumbs = (function () {
 	    function Breadcrumbs() {}
@@ -1650,7 +1646,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var icon_1 = __webpack_require__(22);
 	var sidenav_1 = __webpack_require__(27);
 	var Navbar = (function () {
@@ -1803,7 +1799,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var sidenav_overlay_1 = __webpack_require__(28);
 	var ESC = 27;
 	var SideNav = (function () {
@@ -1904,7 +1900,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var SidenavOverlay = (function () {
 	    function SidenavOverlay() {}
 	    SidenavOverlay = __decorate([vue_class_component_1["default"]({
@@ -1952,8 +1948,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var Velocity = __webpack_require__(15);
+	var vue_class_component_1 = __webpack_require__(18);
+	var Velocity = __webpack_require__(14);
 	var Card = (function () {
 	    function Card() {}
 	    Card.prototype.data = function () {
@@ -2085,9 +2081,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var input_1 = __webpack_require__(12);
-	var bind_boolean_1 = __webpack_require__(4);
+	var vue_class_component_1 = __webpack_require__(18);
+	var input_1 = __webpack_require__(11);
+	var bind_boolean_1 = __webpack_require__(3);
 	var CheckboxField = (function () {
 	    function CheckboxField() {}
 	    CheckboxField.prototype.hasSlot = function (name) {
@@ -2158,7 +2154,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var CheckboxGroup = (function () {
 	    function CheckboxGroup() {}
 	    CheckboxGroup = __decorate([vue_class_component_1["default"]({
@@ -2194,7 +2190,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Chip = (function () {
 	    function Chip() {}
 	    Chip = __decorate([vue_class_component_1["default"]({
@@ -2237,7 +2233,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var CircularPreloader = (function () {
 	    function CircularPreloader() {}
 	    CircularPreloader = __decorate([vue_class_component_1["default"]({
@@ -2287,7 +2283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Collapsible = (function () {
 	    function Collapsible() {}
 	    Collapsible.prototype.ready = function () {
@@ -2412,9 +2408,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var events_1 = __webpack_require__(11);
-	var Velocity = __webpack_require__(15);
+	var vue_class_component_1 = __webpack_require__(18);
+	var events_1 = __webpack_require__(10);
+	var Velocity = __webpack_require__(14);
 	var CollapsibleItem = (function () {
 	    function CollapsibleItem() {}
 	    CollapsibleItem.prototype.data = function () {
@@ -2574,7 +2570,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Collection = (function () {
 	    function Collection() {}
 	    Object.defineProperty(Collection.prototype, "headerSlot", {
@@ -2611,7 +2607,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var CollectionList = (function () {
 	    function CollectionList() {}
 	    Object.defineProperty(CollectionList.prototype, "headerSlot", {
@@ -2648,7 +2644,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var CollectionItem = (function () {
 	    function CollectionItem() {}
 	    Object.defineProperty(CollectionItem.prototype, "secondaryContentSlot", {
@@ -2693,7 +2689,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var CollectionListItem = (function () {
 	    function CollectionListItem() {}
 	    Object.defineProperty(CollectionListItem.prototype, "secondaryContentSlot", {
@@ -2738,11 +2734,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var button_1 = __webpack_require__(21);
 	var dropdown_list_1 = __webpack_require__(56);
 	var dropdown_item_1 = __webpack_require__(57);
-	var click_away_1 = __webpack_require__(6);
+	var click_away_1 = __webpack_require__(5);
 	var Dropdown = (function () {
 	    function Dropdown() {}
 	    Dropdown.prototype.open = function (e) {
@@ -2807,7 +2803,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var button_1 = __webpack_require__(21);
 	var dropdown_item_1 = __webpack_require__(57);
 	var utils_1 = __webpack_require__(59);
@@ -2884,7 +2880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var DropdownItem = (function () {
 	    function DropdownItem() {}
 	    DropdownItem.prototype.select = function () {
@@ -3013,7 +3009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var EventWrapper = (function () {
 	    function EventWrapper() {}
 	    EventWrapper.prototype.ready = function () {
@@ -3058,10 +3054,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var button_1 = __webpack_require__(21);
 	var icon_1 = __webpack_require__(22);
-	var Velocity = __webpack_require__(15);
+	var Velocity = __webpack_require__(14);
 	var Fab = (function () {
 	    function Fab() {}
 	    Fab.prototype.data = function () {
@@ -3159,9 +3155,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var input_1 = __webpack_require__(12);
-	var bind_boolean_1 = __webpack_require__(4);
+	var vue_class_component_1 = __webpack_require__(18);
+	var input_1 = __webpack_require__(11);
+	var bind_boolean_1 = __webpack_require__(3);
 	var FileInputField = (function () {
 	    function FileInputField() {}
 	    FileInputField.prototype.selectFile = function (e) {
@@ -3221,8 +3217,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var input_1 = __webpack_require__(12);
+	var vue_class_component_1 = __webpack_require__(18);
+	var input_1 = __webpack_require__(11);
 	var InputField = (function () {
 	    function InputField() {}
 	    InputField.prototype.data = function () {
@@ -3351,7 +3347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Optgroup = (function () {
 	    function Optgroup() {}
 	    Optgroup = __decorate([vue_class_component_1["default"]({
@@ -3388,9 +3384,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var bind_boolean_1 = __webpack_require__(4);
-	var input_1 = __webpack_require__(12);
+	var vue_class_component_1 = __webpack_require__(18);
+	var bind_boolean_1 = __webpack_require__(3);
+	var input_1 = __webpack_require__(11);
 	var SelectOption = (function () {
 	    function SelectOption() {}
 	    SelectOption.prototype.data = function () {
@@ -3516,10 +3512,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var bind_boolean_1 = __webpack_require__(4);
-	var bind_raw_1 = __webpack_require__(5);
-	var input_1 = __webpack_require__(12);
+	var vue_class_component_1 = __webpack_require__(18);
+	var bind_boolean_1 = __webpack_require__(3);
+	var bind_raw_1 = __webpack_require__(4);
+	var input_1 = __webpack_require__(11);
 	var Radio = (function () {
 	    function Radio() {}
 	    Object.defineProperty(Radio.prototype, "field", {
@@ -3589,7 +3585,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var RadioGroup = (function () {
 	    function RadioGroup() {}
 	    RadioGroup = __decorate([vue_class_component_1["default"]({
@@ -3625,12 +3621,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var dropdown_list_1 = __webpack_require__(56);
-	var input_1 = __webpack_require__(12);
-	var click_away_1 = __webpack_require__(6);
-	var bind_boolean_1 = __webpack_require__(4);
-	var Vue = __webpack_require__(2);
+	var input_1 = __webpack_require__(11);
+	var click_away_1 = __webpack_require__(5);
+	var bind_boolean_1 = __webpack_require__(3);
 	var SelectField = (function () {
 	    function SelectField() {}
 	    SelectField.prototype.data = function () {
@@ -3800,8 +3795,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var input_1 = __webpack_require__(12);
+	var vue_class_component_1 = __webpack_require__(18);
+	var input_1 = __webpack_require__(11);
 	var TextArea = (function () {
 	    function TextArea() {}
 	    TextArea.prototype.data = function () {
@@ -3932,7 +3927,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var materialbox_1 = __webpack_require__(83);
 	var lean_overlay_1 = __webpack_require__(84);
 	var ESC = 27;
@@ -4032,7 +4027,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var Velocity = __webpack_require__(15);
+	var Velocity = __webpack_require__(14);
 	var inDuration = 275;
 	var outDuration = 200;
 	var MaterialBox = (function () {
@@ -4176,7 +4171,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var LeanOverlay = (function () {
 	    function LeanOverlay() {}
 	    LeanOverlay = __decorate([vue_class_component_1["default"]({
@@ -4212,7 +4207,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var LinearPreloader = (function () {
 	    function LinearPreloader() {}
 	    Object.defineProperty(LinearPreloader.prototype, "computedStyle", {
@@ -4262,7 +4257,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var lean_overlay_1 = __webpack_require__(84);
 	var ESC = 27;
 	var Modal = (function () {
@@ -4412,7 +4407,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var NavItem = (function () {
 	    function NavItem() {}
 	    NavItem.prototype.ready = function () {
@@ -4500,9 +4495,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var icon_1 = __webpack_require__(22);
-	var wave_effect_1 = __webpack_require__(8);
+	var wave_effect_1 = __webpack_require__(7);
 	var utils_1 = __webpack_require__(59);
 	var Pagination = (function () {
 	    function Pagination() {}
@@ -4636,8 +4631,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var Vue = __webpack_require__(2);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Slide = (function () {
 	    function Slide() {}
 	    Slide.prototype.compiled = function () {
@@ -4726,7 +4720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Slider = (function () {
 	    function Slider() {}
 	    Slider.prototype.data = function () {
@@ -4795,9 +4789,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var input_1 = __webpack_require__(12);
-	var bind_boolean_1 = __webpack_require__(4);
+	var vue_class_component_1 = __webpack_require__(18);
+	var input_1 = __webpack_require__(11);
+	var bind_boolean_1 = __webpack_require__(3);
 	var Switch = (function () {
 	    function Switch() {}
 	    Switch = __decorate([vue_class_component_1["default"]({
@@ -4843,7 +4837,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
+	var vue_class_component_1 = __webpack_require__(18);
 	var Tab = (function () {
 	    function Tab() {}
 	    Object.defineProperty(Tab.prototype, "computedClasses", {
@@ -4938,8 +4932,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
-	var vue_class_component_1 = __webpack_require__(19);
-	var Velocity = __webpack_require__(15);
+	var vue_class_component_1 = __webpack_require__(18);
+	var Velocity = __webpack_require__(14);
 	var Tabs = (function () {
 	    function Tabs() {}
 	    Tabs.prototype.ready = function () {

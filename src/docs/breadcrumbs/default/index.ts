@@ -3,9 +3,6 @@ import Component from 'vue-class-component';
 import components from '../../../components';
 import directives from '../../../directives';
 
-import VueModule = require('vue')
-var vue: any = VueModule;
-
 @Component({
     components,
     directives,
@@ -30,7 +27,7 @@ export default class DefaultBreadcrumbs {
 
     push() {
         if (this.label && this.url) {
-            vue.set(this.breadcrumbs, this.label, this.url);
+            Vue.set(this.breadcrumbs, this.label, this.url);
             this.label = '';
             this.url = '';
         }
@@ -40,7 +37,7 @@ export default class DefaultBreadcrumbs {
         var keys = Object.keys(this.breadcrumbs);
         if (keys.length) {
             var last = keys[keys.length - 1];
-            vue.delete(this.breadcrumbs, last);
+            Vue.delete(this.breadcrumbs, last);
         }
     }
 }

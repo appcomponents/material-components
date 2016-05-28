@@ -1,8 +1,5 @@
 /// <reference path="../typings/ts.d.ts"/>
 
-import VueModule = require('vue')
-var Vue: any = VueModule;
-
 import pages = require('./pages');
 import components from '../components';
 import directives from '../directives';

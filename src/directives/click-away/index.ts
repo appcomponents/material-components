@@ -1,6 +1,4 @@
 import {DirectiveOption} from 'vue-class-component';
-import VueModule = require('vue')
-var vue: any = VueModule;
 
 var onClickAway: DirectiveOption = {
     
@@ -21,11 +19,11 @@ var onClickAway: DirectiveOption = {
             }
         };
 
-        vue.util.on(document.documentElement, 'click', this.handler);
+        Vue.util.on(document.documentElement, 'click', this.handler);
     },
 
     reset: function() {
-        vue.util.off(document.documentElement, 'click', this.handler);
+        Vue.util.off(document.documentElement, 'click', this.handler);
     },
 
     unbind: function() {
