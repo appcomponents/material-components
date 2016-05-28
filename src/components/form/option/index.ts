@@ -14,6 +14,10 @@ import input from '../../../mixins/input';
         value: {
             type: String,
             required: true
+        },
+        label: {
+            type: String,
+            required: true
         }
     },
     events: {

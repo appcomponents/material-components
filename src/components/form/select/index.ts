@@ -12,6 +12,10 @@ var Vue: any = require('vue');
         value: {
             required: false,
             'default': null
+        },
+        valueText: {
+            required: false,
+            'default': ''
         }
     },
     events: {
@@ -24,6 +28,7 @@ var Vue: any = require('vue');
                 this.close();
             }
             this.$broadcast('option::select', value);
+            this.$nextTick(this.refreshDropdownOptions);
             return true;
 
         },
@@ -35,6 +40,7 @@ var Vue: any = require('vue');
                 this.value = value;
             }
             this.$broadcast('option::unselect', value);
+            this.$nextTick(this.refreshDropdownOptions);
             return true;
         }
     },
@@ -65,6 +71,7 @@ export default class SelectField {
     private options: any;
     private defaultSelect: string;
     private value: any;
+    private valueText: string;
 
     data() {
         return {
@@ -83,16 +90,16 @@ export default class SelectField {
     }
 
     ready() {
-       this.refreshDropdownOptions()
+        this.refreshDropdownOptions()
     }
 
     createOption(option: any) {
-        var content = option._slotContents ? option._slotContents.default : '';
-        var value = option.$data.value;
-        var disabled = option.$data.disabled;
+        var content = option.label;
+        var value = option.value;
+        var disabled = option.disabled;
 
         return {
-            content: content.textContent,
+            content: content,
             value: value,
             disabled: disabled
         };
@@ -100,25 +107,6 @@ export default class SelectField {
 
     get multiple() {
         return Array.isArray(this.value);
-    }
-
-    get valueContent() {
-        return Array.isArray(this.value) ? this.valueContentMultiple : this.valueContentSingle;
-    }
-
-    get valueContentSingle() {
-        return this.options[this.value] ? this.options[this.value].content : '';
-    }
-
-    get valueContentMultiple() {
-        if (this.value.length) {
-            return this.value.map((value) => {
-                return this.options[value] ? this.options[value].content : '';
-            }).join(', ');
-        }
-        else {
-            return this.options[this.defaultSelect] ? this.options[this.defaultSelect].content : ''
-        }
     }
 
     get field() {
@@ -130,15 +118,18 @@ export default class SelectField {
     }
 
     refreshDropdownOptions() {
-        var options = Array.prototype.slice.call(this.field.options);
-        options.forEach((o: HTMLOptionElement) => {
-            if (o.selected) {
-                this.$broadcast('option::select', o.value)
-            }
-            else if (this.multiple) {
-                this.$broadcast('option::unselect', o.value)
-            }
-        });
+        var _self = this;
+        // Update of valueText
+        if(Array.isArray(_self.value)) { // Multiple
+            var result = this.value.map((value) => {
+                return this.options[value] ? this.options[value].content : '';
+            }).join(', ');
+            this.valueText = result;
+        }
+        else { // Single
+            var result = this.options[this.value] ? this.options[this.value].content : '';
+            this.valueText = result;
+        }
     }
 
     open(e) {

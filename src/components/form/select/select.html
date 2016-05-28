@@ -4,9 +4,8 @@
     </i>
     <div class="select-wrapper">
         <span class="caret">▼</span>
-        <input @click="open" readonly="readonly" :value="valueContent"
+        <input @click="open" readonly="readonly" :value.sync="valueText"
                type="text" class="select-dropdown">
-
         <md-dropdown-list :active="active" class="select-dropdown">
             <slot></slot>
         </md-dropdown-list>

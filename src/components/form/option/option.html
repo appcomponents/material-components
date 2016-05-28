@@ -4,6 +4,6 @@
                v-bind-boolean:disabled="disabled"
                type="checkbox">
         <label v-if="multiple"></label>
-        <slot></slot>
+        <slot>{{ label }}</slot>
     </span>
 </li>

@@ -15,6 +15,14 @@
       "default": null
     },
     {
+      "name": "label",
+      "type": "String",
+      "required": true,
+      "description": "Option label",
+      "twoWay": null,
+      "default": null
+    },
+    {
       "name": "disabled",
       "type": "Boolean",
       "required": false,
@@ -24,10 +32,6 @@
     }
   ],
   "slots": [
-    {
-      "name": "",
-      "description": "Option label"
-    }
   ],
   "events": [
     {
