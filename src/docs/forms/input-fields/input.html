@@ -2,20 +2,26 @@
     <form class="col s12">
         <div class="row demo">
             <md-input :value.sync="firstName" placeholder="Placeholder" :success-msg="successMsg" :error-msg="errorMsg"
-                      :valid="bool(firstNameValid)" class="col s6">
+                      :valid="bool(firstNameValid)" class="col s4">
                 First Name
             </md-input>
             <md-input :value.sync="lastName" :success-msg="successMsg" :error-msg="errorMsg"
-                      :valid="bool(lastNameValid)" class="col s6">
+                      :valid="bool(lastNameValid)" class="col s4">
                 Last name
+            </md-input>
+            <md-input :value.sync="age" type="number" :number="true" class="col s4">
+                Age
             </md-input>
         </div>
         <div class="row demo">
-            <div class="output col s6">
+            <div class="output col s4">
                 First name: {{firstName}}
             </div>
-            <div class="output col s6">
+            <div class="output col s4">
                 Last name: {{lastName}}
+            </div>
+            <div class="output col s4">
+                Age: {{age}}
             </div>
         </div>
         <div class="row demo">

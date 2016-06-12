@@ -1,11 +1,11 @@
 import Component from 'vue-class-component';
 
 import inputMixin from '../../../mixins/input';
+import bindBoolean from '../../../directives/bind-boolean';
 
 @Component({
     props: {
         value: {
-            type: String,
             required: false,
             'default': null
         },
@@ -64,6 +64,9 @@ import inputMixin from '../../../mixins/input';
             twoWay: false
         }
     },
+    directives: {
+        bindBoolean
+    },
     mixins: [
         inputMixin
     ],
@@ -83,16 +86,27 @@ export default class InputField {
     private errorMsg: string;
     private successMsg: string;
     private valid: boolean;
+    private number: boolean;
+    private type: string;
 
     data() {
         return {
             active: false
         }
     }
-    
+
+    get hasValue() {
+        if (typeof this.value == 'number') {
+            return this.value !== null && typeof this.value !== 'undefined';
+        }
+        else {
+            return !!this.value;
+        }
+    }
+
    get labelClasses() {
        return {
-           active: this.placeholder || this.active || this.value, // || this.valid != null,
+           active: this.placeholder || this.active || this.hasValue, // || this.valid != null,
            disabled: this.disabled
        }
    }

@@ -8,7 +8,7 @@
   "properties": [
     {
       "name": "value",
-      "type": "String",
+      "type": "String|Number",
       "required": false,
       "description": "Initial value of input field",
       "twoWay": null,

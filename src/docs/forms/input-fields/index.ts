@@ -12,6 +12,7 @@ export default class InputFileds {
         return {
             firstName: 'Martin',
             lastName: '',
+            age: null,
             successMsg: 'Success',
             errorMsg: 'Error',
             firstNameValid: "null",

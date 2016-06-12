@@ -3219,6 +3219,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var vue_class_component_1 = __webpack_require__(18);
 	var input_1 = __webpack_require__(11);
+	var bind_boolean_1 = __webpack_require__(3);
 	var InputField = (function () {
 	    function InputField() {}
 	    InputField.prototype.data = function () {
@@ -3226,10 +3227,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	            active: false
 	        };
 	    };
+	    Object.defineProperty(InputField.prototype, "hasValue", {
+	        get: function get() {
+	            if (typeof this.value == 'number') {
+	                return this.value !== null && typeof this.value !== 'undefined';
+	            } else {
+	                return !!this.value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(InputField.prototype, "labelClasses", {
 	        get: function get() {
 	            return {
-	                active: this.placeholder || this.active || this.value,
+	                active: this.placeholder || this.active || this.hasValue,
 	                disabled: this.disabled
 	            };
 	        },
@@ -3261,7 +3273,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    InputField = __decorate([vue_class_component_1["default"]({
 	        props: {
 	            value: {
-	                type: String,
 	                required: false,
 	                'default': null
 	            },
@@ -3320,6 +3331,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
+	        directives: {
+	            bindBoolean: bind_boolean_1["default"]
+	        },
 	        mixins: [input_1["default"]],
 	        template: __webpack_require__(69)
 	    })], InputField);
@@ -3333,7 +3347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 69 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"input-field\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <input v-if=\"disabled\"\r\n           v-model=\"value\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\" :number=\"number\" :debounce=\"debounce\"\r\n           disabled=\"disabled\"/>\r\n    <input v-else\r\n           v-model=\"value\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\" :number=\"number\" :debounce=\"debounce\"\r\n           @focus=\"activateField\"\r\n           @blur=\"deactivateField\"\r\n           class=\"validate\"\r\n           :class=\"validationClass\"/>\r\n    <label v-if=\"hasSlot()\" :for=\"id\" :class=\"labelClasses\"\r\n           :data-error=\"errorMsg\" :data-success=\"successMsg\">\r\n        <slot></slot>\r\n    </label>\r\n</div>";
+	module.exports = "<div class=\"input-field\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <input v-if=\"disabled\"\r\n           v-model=\"value\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\"\r\n           v-bind-boolean:number=\"number\"\r\n           :debounce=\"debounce\"\r\n           disabled=\"disabled\"/>\r\n    <input v-else\r\n           v-model=\"value\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\"\r\n           v-bind-boolean:number=\"number\"\r\n           :debounce=\"debounce\"\r\n           @focus=\"activateField\"\r\n           @blur=\"deactivateField\"\r\n           class=\"validate\"\r\n           :class=\"validationClass\"/>\r\n    <label v-if=\"hasSlot()\" :for=\"id\" :class=\"labelClasses\"\r\n           :data-error=\"errorMsg\" :data-success=\"successMsg\">\r\n        <slot></slot>\r\n    </label>\r\n</div>";
 
 /***/ },
 /* 70 */

@@ -7,6 +7,9 @@
           :valid="bool(lastNameValid)">
     Last name
 </md-input>
+<md-input :value.sync="age" :number="true" type="number">
+    Age
+</md-input>
 
 <md-input :value.sync="password" type="password">
     Password
