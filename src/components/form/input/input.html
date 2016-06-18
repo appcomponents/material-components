@@ -4,6 +4,7 @@
     </i>
     <input v-if="disabled"
            v-model="value"
+           :name="name"
            :placeholder="placeholder" :id="id"
            :type="type"
            :lazy="lazy"
@@ -12,6 +13,7 @@
            disabled="disabled"/>
     <input v-else
            v-model="value"
+           :name="name"
            :placeholder="placeholder" :id="id"
            :type="type"
            :lazy="lazy"

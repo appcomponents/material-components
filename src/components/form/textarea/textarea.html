@@ -5,13 +5,15 @@
     <textarea v-if="disabled"
               v-el:field
               v-model="value"
-              :id="id" class=
+              :name="name"
+              :id="id" class="materialize-textarea"
               :lazy="lazy" :number="number" :debounce="debounce"
               disabled="disabled">
     </textarea>
     <textarea v-else
               v-el:field
               v-model="value"
+              :name="name"
               :id="id"
               :lazy="lazy" :number="number" :debounce="debounce"
               @focus="activateField"

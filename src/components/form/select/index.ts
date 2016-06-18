@@ -10,6 +10,12 @@ import bindBoolean from '../../../directives/bind-boolean';
         value: {
             required: false,
             'default': null
+        },
+        name: {
+            type: String,
+            required: false,
+            'default': null,
+            twoWay: false
         }
     },
     events: {

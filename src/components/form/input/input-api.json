@@ -15,6 +15,14 @@
       "default": null
     },
     {
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "description": "Name of form input",
+      "twoWay": false,
+      "default": null
+    },
+    {
       "name": "placeholder",
       "type": "String",
       "required": false,

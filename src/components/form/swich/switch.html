@@ -3,6 +3,7 @@
         <slot name="off">Off</slot>
         <input v-model="value"
                v-bind-boolean:disabled="disabled"
+               :name="name"
                type="checkbox">
         <span class="lever"></span>
         <slot name="on">On</slot>

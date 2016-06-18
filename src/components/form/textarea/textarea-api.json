@@ -14,7 +14,14 @@
       "twoWay": false,
       "default": null
     },
-
+    {
+      "name": "name",
+      "type": "String",
+      "required": false,
+      "description": "Name of form input",
+      "twoWay": false,
+      "default": null
+    },
     {
       "name": "disabled",
       "type": "Boolean",

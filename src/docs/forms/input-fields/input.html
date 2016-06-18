@@ -1,11 +1,11 @@
 <div class="row">
     <form class="col s12">
         <div class="row demo">
-            <md-input :value.sync="firstName" placeholder="Placeholder" :success-msg="successMsg" :error-msg="errorMsg"
+            <md-input name="first_name" :value.sync="firstName" placeholder="Placeholder" :success-msg="successMsg" :error-msg="errorMsg"
                       :valid="bool(firstNameValid)" class="col s4">
                 First Name
             </md-input>
-            <md-input :value.sync="lastName" :success-msg="successMsg" :error-msg="errorMsg"
+            <md-input name="last_name" :value.sync="lastName" :success-msg="successMsg" :error-msg="errorMsg"
                       :valid="bool(lastNameValid)" class="col s4">
                 Last name
             </md-input>
