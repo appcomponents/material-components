@@ -6,12 +6,9 @@
   ],
   "description": "Web components of http://materializecss.com/",
   "main": [
-    "dist/vue-material.js",
-    "dist/vue-material.js.map",
-    "dist/vue-material.min.js",
-    "dist/vue-material.css",
-    "dist/vue-material.css.map",
-    "dist/vue-material.min.css"
+    "dist/vue-material-components.css",
+    "dist/vue-material-components.js",
+    "dist/vue-material-components.min.js"
   ],
   "moduleType": [
     "commonjs",
@@ -25,16 +22,19 @@
   ],
   "license": "MIT",
   "ignore": [
+    ".gitignore",
     "assets",
     "node_modules",
     "bower_components",
     "docs",
     "src",
     "build",
-    "dist",
     "gulpfile.js",
+    "demo.html",
     "index.html",
     "webpack*.js",
-    "utils"
+    "utils",
+    "LICENSE.txt",
+    "README.md"
   ]
 }
