@@ -37,3 +37,5 @@ Vue.use(VueMaterialComponents)
 * **0.2.0** Plugin now uses the `Vue.use` syntax.
 
 * Vue is now external dependency and must be linked before MaterialComponents
+
+* **0.3.0** md-btn component
