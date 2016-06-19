@@ -383,7 +383,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var checkbox_1 = __webpack_require__(41);
 	var checkbox_group_1 = __webpack_require__(43);
 	var chip_1 = __webpack_require__(45);
-	var circural_preloader_1 = __webpack_require__(47);
+	var circular_preloader_1 = __webpack_require__(47);
 	var collapsible_1 = __webpack_require__(49);
 	var collapsible_item_1 = __webpack_require__(51);
 	var collection_1 = __webpack_require__(53);
@@ -428,7 +428,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    mdCheckbox: checkbox_1['default'],
 	    mdCheckboxGroup: checkbox_group_1['default'],
 	    mdChip: chip_1['default'],
-	    mdCircuralPreloader: circural_preloader_1['default'],
+	    mdCircularPreloader: circular_preloader_1['default'],
 	    mdCollapsible: collapsible_1['default'],
 	    mdCollapsibleItem: collapsible_item_1['default'],
 	    mdCollection: collection_1['default'],
@@ -11452,13 +11452,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(6);
-	var circural_preloader_1 = __webpack_require__(47);
+	var components_1 = __webpack_require__(7);
 	var CircularPreloader = (function () {
 	    function CircularPreloader() {}
 	    CircularPreloader = __decorate([vue_class_component_1["default"]({
-	        components: {
-	            mdCircularPreloader: circural_preloader_1["default"]
-	        },
+	        components: components_1["default"],
 	        template: __webpack_require__(427)
 	    })], CircularPreloader);
 	    return CircularPreloader;
@@ -11486,12 +11484,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(6);
-	var circural_preloader_1 = __webpack_require__(47);
+	var circular_preloader_1 = __webpack_require__(47);
 	var FlashingPreloader = (function () {
 	    function FlashingPreloader() {}
 	    FlashingPreloader = __decorate([vue_class_component_1["default"]({
 	        components: {
-	            mdCircularPreloader: circural_preloader_1["default"]
+	            mdCircularPreloader: circular_preloader_1["default"]
 	        },
 	        template: __webpack_require__(429)
 	    })], FlashingPreloader);

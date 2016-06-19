@@ -23,7 +23,7 @@ export default class Preloaders {
                 },
                 {
                     name: "Circular preloader",
-                    api: require('../../components/circural-preloader/circular-preloader-api.json')
+                    api: require('../../components/circular-preloader/circular-preloader-api.json')
                 }
             ],
             snippets: {
@@ -40,8 +40,8 @@ export default class Preloaders {
                 },
                 {
                     name: "Circular preloader",
-                    script: require("!!html!highlightjs?lang=ts!../../components/circural-preloader/index.ts"),
-                    template: require('!!html!highlightjs?lang=html!../../components/circural-preloader/circular-preloader.html')
+                    script: require("!!html!highlightjs?lang=ts!../../components/circular-preloader/index.ts"),
+                    template: require('!!html!highlightjs?lang=html!../../components/circular-preloader/circular-preloader.html')
                 }
             ]
         }

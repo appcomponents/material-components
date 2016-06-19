@@ -89,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var checkbox_1 = __webpack_require__(37);
 	var checkbox_group_1 = __webpack_require__(39);
 	var chip_1 = __webpack_require__(41);
-	var circural_preloader_1 = __webpack_require__(43);
+	var circular_preloader_1 = __webpack_require__(43);
 	var collapsible_1 = __webpack_require__(45);
 	var collapsible_item_1 = __webpack_require__(47);
 	var collection_1 = __webpack_require__(49);
@@ -134,7 +134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    mdCheckbox: checkbox_1['default'],
 	    mdCheckboxGroup: checkbox_group_1['default'],
 	    mdChip: chip_1['default'],
-	    mdCircuralPreloader: circural_preloader_1['default'],
+	    mdCircularPreloader: circular_preloader_1['default'],
 	    mdCollapsible: collapsible_1['default'],
 	    mdCollapsibleItem: collapsible_item_1['default'],
 	    mdCollection: collection_1['default'],

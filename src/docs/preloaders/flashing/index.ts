@@ -1,6 +1,6 @@
 import Component from 'vue-class-component';
 
-import mdCircularPreloader from '../../../components/circural-preloader';
+import mdCircularPreloader from '../../../components/circular-preloader';
 
 @Component({
     components: {

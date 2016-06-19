@@ -1,11 +1,9 @@
 import Component from 'vue-class-component';
 
-import mdCircularPreloader from '../../../components/circural-preloader';
+import components from '../../../components';
 
 @Component({
-    components: {
-        mdCircularPreloader
-    },
+    components,
     template: require('./circular.html')
 })
 export default class CircularPreloader {
