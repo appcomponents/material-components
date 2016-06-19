@@ -1,4 +1,5 @@
 import {DirectiveOption} from 'vue-class-component';
+var Vue = Vue || require('vue');
 
 var onClickAway: DirectiveOption = {
     

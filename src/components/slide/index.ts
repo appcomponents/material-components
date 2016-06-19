@@ -1,5 +1,7 @@
 import Component from 'vue-class-component';
 
+var Vue: any = Vue || require('vue');
+
 @Component({
     props: {
         img: {

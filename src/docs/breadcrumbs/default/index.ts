@@ -3,6 +3,8 @@ import Component from 'vue-class-component';
 import components from '../../../components';
 import directives from '../../../directives';
 
+var Vue = Vue || require('vue');
+
 @Component({
     components,
     directives,
