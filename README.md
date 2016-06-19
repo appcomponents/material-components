@@ -39,3 +39,13 @@ Vue.use(VueMaterialComponents)
 * Vue is now external dependency and must be linked before MaterialComponents
 
 * **0.3.0** md-btn component
+
+
+## Issues
+
+Please make sure to read the [Issue Reporting Checklist](https://github.com/vuejs/vue/blob/dev/CONTRIBUTING.md#issue-reporting-guidelines) before opening an issue. Issues not conforming to the guidelines may be closed immediately.
+
+
+## Contribution
+
+Please make sure to read the [Contributing Guide](https://github.com/vuejs/vue/blob/dev/CONTRIBUTING.md) before making a pull request.
