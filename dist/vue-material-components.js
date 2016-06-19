@@ -83,50 +83,52 @@ return /******/ (function(modules) { // webpackBootstrap
 	var mixins_1 = __webpack_require__(10);
 	var badge_1 = __webpack_require__(18);
 	var button_1 = __webpack_require__(21);
-	var breadcrumbs_1 = __webpack_require__(25);
-	var card_1 = __webpack_require__(33);
-	var checkbox_1 = __webpack_require__(35);
-	var checkbox_group_1 = __webpack_require__(37);
-	var chip_1 = __webpack_require__(39);
-	var circural_preloader_1 = __webpack_require__(41);
-	var collapsible_1 = __webpack_require__(43);
-	var collapsible_item_1 = __webpack_require__(45);
-	var collection_1 = __webpack_require__(47);
-	var collection_list_1 = __webpack_require__(49);
-	var collection_item_1 = __webpack_require__(51);
-	var collection_list_item_1 = __webpack_require__(53);
-	var dropdown_1 = __webpack_require__(55);
-	var dropdown_item_1 = __webpack_require__(57);
-	var dropdown_list_1 = __webpack_require__(56);
-	var event_wrapper_1 = __webpack_require__(62);
-	var fab_1 = __webpack_require__(64);
-	var file_input_1 = __webpack_require__(66);
-	var input_1 = __webpack_require__(68);
-	var optgroup_1 = __webpack_require__(70);
-	var option_1 = __webpack_require__(72);
-	var radio_1 = __webpack_require__(74);
-	var radio_group_1 = __webpack_require__(76);
-	var select_1 = __webpack_require__(78);
-	var textarea_1 = __webpack_require__(80);
+	var btn_1 = __webpack_require__(25);
+	var breadcrumbs_1 = __webpack_require__(27);
+	var card_1 = __webpack_require__(35);
+	var checkbox_1 = __webpack_require__(37);
+	var checkbox_group_1 = __webpack_require__(39);
+	var chip_1 = __webpack_require__(41);
+	var circural_preloader_1 = __webpack_require__(43);
+	var collapsible_1 = __webpack_require__(45);
+	var collapsible_item_1 = __webpack_require__(47);
+	var collection_1 = __webpack_require__(49);
+	var collection_list_1 = __webpack_require__(51);
+	var collection_item_1 = __webpack_require__(53);
+	var collection_list_item_1 = __webpack_require__(55);
+	var dropdown_1 = __webpack_require__(57);
+	var dropdown_item_1 = __webpack_require__(59);
+	var dropdown_list_1 = __webpack_require__(58);
+	var event_wrapper_1 = __webpack_require__(64);
+	var fab_1 = __webpack_require__(66);
+	var file_input_1 = __webpack_require__(68);
+	var input_1 = __webpack_require__(70);
+	var optgroup_1 = __webpack_require__(72);
+	var option_1 = __webpack_require__(74);
+	var radio_1 = __webpack_require__(76);
+	var radio_group_1 = __webpack_require__(78);
+	var select_1 = __webpack_require__(80);
+	var textarea_1 = __webpack_require__(82);
 	var icon_1 = __webpack_require__(22);
-	var image_1 = __webpack_require__(82);
-	var lean_overlay_1 = __webpack_require__(84);
-	var linear_preloader_1 = __webpack_require__(87);
-	var modal_1 = __webpack_require__(89);
-	var nav_item_1 = __webpack_require__(91);
-	var navbar_1 = __webpack_require__(26);
-	var pagination_1 = __webpack_require__(93);
-	var sidenav_1 = __webpack_require__(27);
-	var sidenav_overlay_1 = __webpack_require__(28);
-	var slide_1 = __webpack_require__(95);
-	var slider_1 = __webpack_require__(97);
-	var swich_1 = __webpack_require__(99);
-	var tab_1 = __webpack_require__(101);
-	var tabs_1 = __webpack_require__(103);
-	__webpack_require__(105);
+	var image_1 = __webpack_require__(84);
+	var lean_overlay_1 = __webpack_require__(86);
+	var linear_preloader_1 = __webpack_require__(89);
+	var modal_1 = __webpack_require__(91);
+	var nav_item_1 = __webpack_require__(93);
+	var navbar_1 = __webpack_require__(28);
+	var pagination_1 = __webpack_require__(95);
+	var sidenav_1 = __webpack_require__(29);
+	var sidenav_overlay_1 = __webpack_require__(30);
+	var slide_1 = __webpack_require__(97);
+	var slider_1 = __webpack_require__(99);
+	var swich_1 = __webpack_require__(101);
+	var tab_1 = __webpack_require__(103);
+	var tabs_1 = __webpack_require__(105);
+	__webpack_require__(107);
 	var VueMaterializeComponents = {
 	    mdBadge: badge_1['default'],
 	    mdButton: button_1['default'],
+	    mdBtn: btn_1['default'],
 	    mdBreadcrumbs: breadcrumbs_1['default'],
 	    mdCard: card_1['default'],
 	    mdCheckbox: checkbox_1['default'],
@@ -1614,7 +1616,98 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(19);
-	var navbar_1 = __webpack_require__(26);
+	var icon_1 = __webpack_require__(22);
+	var wave_effect_1 = __webpack_require__(8);
+	var bind_boolean_1 = __webpack_require__(4);
+	var Btn = (function () {
+	    function Btn() {}
+	    Object.defineProperty(Btn.prototype, "computedClasses", {
+	        get: function get() {
+	            var classes = {
+	                'btn-large': this.large,
+	                'disabled': this.disabled,
+	                'btn-floating': this.floating
+	            };
+	            classes[this.type ? "btn-" + this.type : "btn"] = true;
+	            return classes;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Btn = __decorate([vue_class_component_1["default"]({
+	        props: {
+	            type: {
+	                type: String,
+	                required: false,
+	                "default": null,
+	                twoWay: false
+	            },
+	            icon: {
+	                type: String,
+	                required: false,
+	                "default": null,
+	                twoWay: false
+	            },
+	            iconAlignRight: {
+	                type: Boolean,
+	                required: false,
+	                "default": false,
+	                twoWay: false
+	            },
+	            large: {
+	                type: Boolean,
+	                required: false,
+	                "default": false,
+	                twoWay: false
+	            },
+	            disabled: {
+	                type: Boolean,
+	                required: false,
+	                "default": false,
+	                twoWay: false
+	            },
+	            floating: {
+	                type: Boolean,
+	                required: false,
+	                "default": false,
+	                twoWay: false
+	            }
+	        },
+	        components: {
+	            mdIcon: icon_1["default"]
+	        },
+	        directives: {
+	            waveEffect: wave_effect_1["default"],
+	            bindBoolean: bind_boolean_1["default"]
+	        },
+	        template: __webpack_require__(26)
+	    })], Btn);
+	    return Btn;
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	exports["default"] = Btn;
+	//# sourceMappingURL=index.js.map
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "<button :class=\"computedClasses\" v-bind-boolean:disabled=\"disabled\" v-wave-effect class=\"md-button\">\r\n    <md-icon v-if=\"icon\" :right=\"iconAlignRight\" :left=\"!iconAlignRight\">\r\n        {{icon}}\r\n    </md-icon>\r\n    <slot></slot>\r\n</button>";
+
+/***/ },
+/* 27 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+	    var c = arguments.length,
+	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+	        d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var vue_class_component_1 = __webpack_require__(19);
+	var navbar_1 = __webpack_require__(28);
 	var Breadcrumbs = (function () {
 	    function Breadcrumbs() {}
 	    Breadcrumbs = __decorate([vue_class_component_1["default"]({
@@ -1628,7 +1721,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        components: {
 	            mdNavbar: navbar_1["default"]
 	        },
-	        template: __webpack_require__(32)
+	        template: __webpack_require__(34)
 	    })], Breadcrumbs);
 	    return Breadcrumbs;
 	})();
@@ -1637,7 +1730,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1650,7 +1743,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var vue_class_component_1 = __webpack_require__(19);
 	var icon_1 = __webpack_require__(22);
-	var sidenav_1 = __webpack_require__(27);
+	var sidenav_1 = __webpack_require__(29);
 	var Navbar = (function () {
 	    function Navbar() {}
 	    Object.defineProperty(Navbar.prototype, "logoClasses", {
@@ -1781,7 +1874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        },
-	        template: __webpack_require__(31)
+	        template: __webpack_require__(33)
 	    })], Navbar);
 	    return Navbar;
 	})();
@@ -1790,7 +1883,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1802,7 +1895,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(19);
-	var sidenav_overlay_1 = __webpack_require__(28);
+	var sidenav_overlay_1 = __webpack_require__(30);
 	var ESC = 27;
 	var SideNav = (function () {
 	    function SideNav() {}
@@ -1882,7 +1975,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        components: {
 	            mdSidenavOverlay: sidenav_overlay_1["default"]
 	        },
-	        template: __webpack_require__(30)
+	        template: __webpack_require__(32)
 	    })], SideNav);
 	    return SideNav;
 	})();
@@ -1891,7 +1984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1906,7 +1999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var SidenavOverlay = (function () {
 	    function SidenavOverlay() {}
 	    SidenavOverlay = __decorate([vue_class_component_1["default"]({
-	        template: __webpack_require__(29)
+	        template: __webpack_require__(31)
 	    })], SidenavOverlay);
 	    return SidenavOverlay;
 	})();
@@ -1915,31 +2008,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "<div id=\"sidenav-overlay\"></div>";
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-sidenav\">\r\n    <ul v-if=\"active\" transition=\"side-nav\" :style=\"computedStyle\" :class=\"{fixed: fixed}\" class=\"side-nav\">\r\n        <slot></slot>\r\n    </ul>\r\n\r\n    <div v-if=\"!fixed\" @click=\"close\">\r\n        <md-sidenav-overlay v-if=\"active\" transition=\"modal-overlay\"></md-sidenav-overlay>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"{'navbar-fixed': fixed}\"\r\n     :style=\"fixed ? {position: 'absolute', top: 0}: {}\"\r\n     class=\"md-navbar\">\r\n\r\n    <nav :class=\"navClass\">\r\n        <div class=\"nav-wrapper\" :class=\"wrapperClass\">\r\n            <slot name=\"content\">\r\n                <slot name=\"logo\">\r\n                    <a v-if=\"title\"\r\n                       :href=\"titleHref\" class=\"brand-logo\" :class=\"logoClasses\">\r\n                        {{title}}\r\n                    </a>\r\n                    <a v-if=\"hamburger\" href=\"javascript:void(0)\" class=\"button-collapse\"\r\n                       @click=\"openSideMenu\">\r\n                        <md-icon>menu</md-icon>\r\n                    </a>\r\n                </slot>\r\n\r\n                <slot name=\"navs\">\r\n                    <ul v-if=\"!onlySideNav\" :class=\"listClasses\">\r\n                        <slot></slot>\r\n                    </ul>\r\n                    <md-sidenav :close-on-click=\"closeOnClick\"> <!-- only if is active -->\r\n                        <slot></slot>\r\n                    </md-sidenav>\r\n                </slot>\r\n            </slot>\r\n        </div>\r\n    </nav>\r\n</div>\r\n";
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-navbar class=\"md-breadcrumbs\">\r\n    <div slot=\"content\">\r\n        <a v-for=\"(label, url) in list\" :href=\"url\" class=\"breadcrumb\">\r\n            {{label}}\r\n        </a>\r\n    </div>\r\n</md-navbar>";
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2057,7 +2150,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(34)
+	        template: __webpack_require__(36)
 	    })], Card);
 	    return Card;
 	})();
@@ -2066,13 +2159,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :style=\"{overflow: revealSlot ? 'hidden' : 'initial'}\"\r\n     :class=\"{small: small, medium: medium, large: large}\"\r\n     class=\"md-card card\">\r\n    <slot name=\"card-content\">\r\n        <slot name=\"card-image\">\r\n            <div v-if=\"imageSlot\" class=\"card-image\">\r\n                <slot name=\"image\"></slot>\r\n                <div v-if=\"titleSlot && titleInImage\" class=\"card-title\">\r\n                    <slot name=\"title\"></slot>\r\n                </div>\r\n            </div>\r\n        </slot>\r\n\r\n        <div class=\"card-content\" :class=\"contentClass\">\r\n            <div v-if=\"titleSlot && !titleInImage\" class=\"card-title\">\r\n                <slot name=\"title\"></slot>\r\n            </div>\r\n            <slot></slot>\r\n        </div>\r\n\r\n        <slot name=\"card-action\">\r\n            <div v-if=\"actionsSlot\" class=\"card-action\">\r\n                <slot name=\"actions\"></slot>\r\n            </div>\r\n        </slot>\r\n\r\n        <div v-if=\"revealSlot\" v-el:reveal class=\"card-reveal\">\r\n            <i v-el:reveal-close class=\"material-icons right close\">close</i>\r\n            <slot name=\"reveal\"></slot>\r\n        </div>\r\n    </slot>\r\n</div>";
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2130,7 +2223,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(36)
+	        template: __webpack_require__(38)
 	    })], CheckboxField);
 	    return CheckboxField;
 	})();
@@ -2139,13 +2232,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-checkbox input-field\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <input v-model=\"value\"\r\n           :id=\"id\"\r\n           :name=\"resolvedName\"\r\n           v-bind-boolean:disabled=\"disabled\"\r\n           type=\"checkbox\"/>\r\n    <label v-if=\"hasSlot()\" :for=\"id\">\r\n        <slot></slot>\r\n    </label>\r\n</div>";
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2166,7 +2259,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                required: true
 	            }
 	        },
-	        template: __webpack_require__(38)
+	        template: __webpack_require__(40)
 	    })], CheckboxGroup);
 	    return CheckboxGroup;
 	})();
@@ -2175,13 +2268,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"input-field\">\r\n    <slot></slot>\r\n</div>";
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2209,7 +2302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'default': false
 	            }
 	        },
-	        template: __webpack_require__(40)
+	        template: __webpack_require__(42)
 	    })], Chip);
 	    return Chip;
 	})();
@@ -2218,13 +2311,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-if=\"!closed\" class=\"chip md-chip\" transition=\"chip\">\r\n    <slot></slot>\r\n    <i v-if=\"closeable\"\r\n       @click=\"closed = true\" class=\"material-icons\">close</i>\r\n</div>";
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2259,7 +2352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(42)
+	        template: __webpack_require__(44)
 	    })], CircularPreloader);
 	    return CircularPreloader;
 	})();
@@ -2268,13 +2361,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"preloader-wrapper active\" :class=\"size\">\r\n    <div v-if=\"!flashing\" class=\"spinner-layer\" :class=\"'spinner-' + color + '-only'\">\r\n        <div class=\"circle-clipper left\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"gap-patch\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"circle-clipper right\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n    </div>\r\n\r\n    <!-- flashing -->\r\n    <div v-if=\"flashing\" class=\"spinner-layer spinner-blue\">\r\n        <div class=\"circle-clipper left\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"gap-patch\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"circle-clipper right\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n    </div>\r\n\r\n    <div v-if=\"flashing\" class=\"spinner-layer spinner-red\">\r\n        <div class=\"circle-clipper left\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"gap-patch\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"circle-clipper right\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n    </div>\r\n\r\n    <div v-if=\"flashing\" class=\"spinner-layer spinner-yellow\">\r\n        <div class=\"circle-clipper left\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"gap-patch\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"circle-clipper right\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n    </div>\r\n\r\n    <div v-if=\"flashing\" class=\"spinner-layer spinner-green\">\r\n        <div class=\"circle-clipper left\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"gap-patch\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n        <div class=\"circle-clipper right\">\r\n            <div class=\"circle\"></div>\r\n        </div>\r\n    </div>\r\n</div>";
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2384,7 +2477,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return this.close(id);
 	            }
 	        },
-	        template: __webpack_require__(44)
+	        template: __webpack_require__(46)
 	    })], Collapsible);
 	    return Collapsible;
 	})();
@@ -2393,13 +2486,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"collapsible\" :class=\"{popout: popout}\">\r\n    <slot></slot>\r\n</ul>";
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2546,7 +2639,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this.close(id);
 	            }
 	        },
-	        template: __webpack_require__(46)
+	        template: __webpack_require__(48)
 	    })], CollapsibleItem);
 	    return CollapsibleItem;
 	})();
@@ -2555,13 +2648,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<li :class=\"{active: active}\">\r\n    <slot name=\"content\">\r\n        <div @click=\"toggle\" class=\"collapsible-header\">\r\n            <slot name=\"header\"></slot>\r\n        </div>\r\n        <div v-el:body class=\"collapsible-body\" :style=\"computedStyle\">\r\n            <slot name=\"body\"></slot>\r\n        </div>\r\n    </slot>\r\n</li>\r\n";
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2583,7 +2676,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        configurable: true
 	    });
 	    Collection = __decorate([vue_class_component_1["default"]({
-	        template: __webpack_require__(48)
+	        template: __webpack_require__(50)
 	    })], Collection);
 	    return Collection;
 	})();
@@ -2592,13 +2685,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"collection\" :class=\"{'with-header': headerSlot}\">\r\n    <div v-if=\"headerSlot\" class=\"collection-header\">\r\n        <slot name=\"header\"></slot>\r\n    </div>\r\n    <slot></slot>\r\n</div>";
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2620,7 +2713,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        configurable: true
 	    });
 	    CollectionList = __decorate([vue_class_component_1["default"]({
-	        template: __webpack_require__(50)
+	        template: __webpack_require__(52)
 	    })], CollectionList);
 	    return CollectionList;
 	})();
@@ -2629,13 +2722,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"collection\" :class=\"{'with-header': headerSlot}\">\r\n    <div v-if=\"headerSlot\" class=\"collection-header\">\r\n        <slot name=\"header\"></slot>\r\n    </div>\r\n    <slot></slot>\r\n</ul>";
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2665,7 +2758,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(52)
+	        template: __webpack_require__(54)
 	    })], CollectionItem);
 	    return CollectionItem;
 	})();
@@ -2674,13 +2767,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<a class=\"md-collection-item collection-item\" :class=\"{active: active}\">\r\n    <slot></slot>\r\n    <span v-if=\"secondaryContentSlot\" class=\"secondary-content\">\r\n        <slot name=\"secondary-content\"></slot>\r\n    </span>\r\n</a>";
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2710,7 +2803,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(54)
+	        template: __webpack_require__(56)
 	    })], CollectionListItem);
 	    return CollectionListItem;
 	})();
@@ -2719,13 +2812,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"md-collection-item collection-item\" :class=\"{active: active}\">\r\n    <slot></slot>\r\n    <span v-if=\"secondaryContentSlot\" class=\"secondary-content\">\r\n        <slot name=\"secondary-content\"></slot>\r\n    </span>\r\n</li>";
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2738,8 +2831,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var vue_class_component_1 = __webpack_require__(19);
 	var button_1 = __webpack_require__(21);
-	var dropdown_list_1 = __webpack_require__(56);
-	var dropdown_item_1 = __webpack_require__(57);
+	var dropdown_list_1 = __webpack_require__(58);
+	var dropdown_item_1 = __webpack_require__(59);
 	var click_away_1 = __webpack_require__(6);
 	var Dropdown = (function () {
 	    function Dropdown() {}
@@ -2785,7 +2878,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this.$broadcast('dropdown-list::open', e);
 	            }
 	        },
-	        template: __webpack_require__(61)
+	        template: __webpack_require__(63)
 	    })], Dropdown);
 	    return Dropdown;
 	})();
@@ -2794,7 +2887,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2807,8 +2900,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 	var vue_class_component_1 = __webpack_require__(19);
 	var button_1 = __webpack_require__(21);
-	var dropdown_item_1 = __webpack_require__(57);
-	var utils_1 = __webpack_require__(59);
+	var dropdown_item_1 = __webpack_require__(59);
+	var utils_1 = __webpack_require__(61);
 	var DropdownList = (function () {
 	    function DropdownList() {}
 	    DropdownList.prototype.data = function () {
@@ -2862,7 +2955,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this.open(e);
 	            }
 	        },
-	        template: __webpack_require__(60)
+	        template: __webpack_require__(62)
 	    })], DropdownList);
 	    return DropdownList;
 	})();
@@ -2871,7 +2964,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2916,7 +3009,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(58)
+	        template: __webpack_require__(60)
 	    })], DropdownItem);
 	    return DropdownItem;
 	})();
@@ -2925,13 +3018,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports) {
 
 	module.exports = "<li @click.prevent=\"select\">\r\n    <a href=\"javascript:void(0)\">\r\n        <slot></slot>\r\n    </a>\r\n</li>";
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2988,19 +3081,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"dropdown-content\"\r\n    :class=\"{active: active}\" :style=\"style\">\r\n    <slot></slot>\r\n</ul>\r\n";
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-on-click-away=\"close\">\r\n    <md-dropdown-list>\r\n        <slot></slot>\r\n    </md-dropdown-list>\r\n\r\n    <span @click=\"open\">\r\n        <slot name=\"button\">\r\n            <md-button href=\"javascript:void(0)\"\r\n                 :class=\"{active: active}\"\r\n                 class=\"dropdown-button\">\r\n                {{title}}\r\n                <i class=\"mdi-navigation-arrow-drop-down right\"></i>\r\n            </md-button>\r\n        </slot>\r\n    </span>\r\n</div>\r\n";
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3030,7 +3123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                required: true
 	            }
 	        },
-	        template: __webpack_require__(63)
+	        template: __webpack_require__(65)
 	    })], EventWrapper);
 	    return EventWrapper;
 	})();
@@ -3039,13 +3132,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports) {
 
 	module.exports = "<slot></slot>";
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3131,7 +3224,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            mdButton: button_1["default"],
 	            mdIcon: icon_1["default"]
 	        },
-	        template: __webpack_require__(65)
+	        template: __webpack_require__(67)
 	    })], Fab);
 	    return Fab;
 	})();
@@ -3140,13 +3233,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-el:fab class=\"md-fab fixed-action-btn\" :class=\"{horizontal: horizontal}\">\r\n    <slot name=\"button\">\r\n        <md-button floating large class=\"red\">\r\n            <slot name=\"icon\">\r\n                <md-icon class=\"large\">\r\n                    <slot name=\"icon-name\">\r\n                        menu\r\n                    </slot>\r\n                </md-icon>\r\n            </slot>\r\n        </md-button>\r\n    </slot>\r\n    <ul :style=\"{visibility: active ? 'visible' : 'hidden'}\">\r\n        <slot></slot>\r\n    </ul>\r\n</div>";
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3193,7 +3286,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(67)
+	        template: __webpack_require__(69)
 	    })], FileInputField);
 	    return FileInputField;
 	})();
@@ -3202,13 +3295,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"file-field input-field\">\r\n    <div class=\"btn\">\r\n        <slot>\r\n            <span>File</span>\r\n        </slot>\r\n        <input @change=\"selectFile\" :name=\"name\"\r\n               v-bind-boolean:multiple=\"multiple\" type=\"file\">\r\n    </div>\r\n    <div class=\"file-path-wrapper\">\r\n        <input v-model=\"value\"\r\n               :placeholder=\"placeholder\"\r\n               class=\"file-path field\" type=\"text\">\r\n    </div>\r\n</div>";
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3343,7 +3436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(69)
+	        template: __webpack_require__(71)
 	    })], InputField);
 	    return InputField;
 	})();
@@ -3352,13 +3445,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"input-field\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <input v-if=\"disabled\"\r\n           v-model=\"value\"\r\n           :name=\"name\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\"\r\n           v-bind-boolean:number=\"number\"\r\n           :debounce=\"debounce\"\r\n           disabled=\"disabled\"/>\r\n    <input v-else\r\n           v-model=\"value\"\r\n           :name=\"name\"\r\n           :placeholder=\"placeholder\" :id=\"id\"\r\n           :type=\"type\"\r\n           :lazy=\"lazy\"\r\n           v-bind-boolean:number=\"number\"\r\n           :debounce=\"debounce\"\r\n           @focus=\"activateField\"\r\n           @blur=\"deactivateField\"\r\n           class=\"validate\"\r\n           :class=\"validationClass\"/>\r\n    <label v-if=\"hasSlot()\" :for=\"id\" :class=\"labelClasses\"\r\n           :data-error=\"errorMsg\" :data-success=\"successMsg\">\r\n        <slot></slot>\r\n    </label>\r\n</div>";
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3380,7 +3473,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                'default': false
 	            }
 	        },
-	        template: __webpack_require__(71)
+	        template: __webpack_require__(73)
 	    })], Optgroup);
 	    return Optgroup;
 	})();
@@ -3389,13 +3482,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports) {
 
 	module.exports = "<li class=\"optgroup\">\r\n    <span>\r\n        {{label}}\r\n    </span>\r\n</li>\r\n<slot></slot>";
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3508,7 +3601,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(73)
+	        template: __webpack_require__(75)
 	    })], SelectOption);
 	    return SelectOption;
 	})();
@@ -3517,13 +3610,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports) {
 
 	module.exports = "<li @click.prevent=\"toggle\" :class=\"computedClasses\">\r\n    <span>\r\n        <input v-show=\"multiple\" v-model=\"active\"\r\n               v-bind-boolean:disabled=\"disabled\"\r\n               type=\"checkbox\">\r\n        <label v-if=\"multiple\"></label>\r\n        <slot></slot>\r\n    </span>\r\n</li>";
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3581,7 +3674,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindRaw: bind_raw_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(75)
+	        template: __webpack_require__(77)
 	    })], Radio);
 	    return Radio;
 	})();
@@ -3590,13 +3683,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<span class=\"md-radio\">\r\n    <input v-model=\"value\"\r\n           :value=\"radioValue\"\r\n           v-bind-boolean:disabled=\"disabled\"\r\n           v-bind-boolean:checked=\"checked\"\r\n           :id=\"id\" :name=\"group\"\r\n           type=\"radio\"/>\r\n    <label v-if=\"hasSlot()\" :for=\"id\">\r\n        <slot></slot>\r\n    </label>\r\n</span>";
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3617,7 +3710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                required: true
 	            }
 	        },
-	        template: __webpack_require__(77)
+	        template: __webpack_require__(79)
 	    })], RadioGroup);
 	    return RadioGroup;
 	})();
@@ -3626,13 +3719,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"input-field\">\r\n    <slot></slot>\r\n</div>";
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3644,7 +3737,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(19);
-	var dropdown_list_1 = __webpack_require__(56);
+	var dropdown_list_1 = __webpack_require__(58);
 	var input_1 = __webpack_require__(12);
 	var click_away_1 = __webpack_require__(6);
 	var bind_boolean_1 = __webpack_require__(4);
@@ -3798,7 +3891,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(79)
+	        template: __webpack_require__(81)
 	    })], SelectField);
 	    return SelectField;
 	})();
@@ -3807,13 +3900,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-select input-field\" v-click-away=\"close\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <div class=\"select-wrapper\">\r\n        <span class=\"caret\">▼</span>\r\n        <input @click=\"open\" readonly=\"readonly\" :value=\"valueContent\" :name=\"name\"\r\n               type=\"text\" class=\"select-dropdown\">\r\n\r\n        <md-dropdown-list :active=\"active\" class=\"select-dropdown\">\r\n            <slot></slot>\r\n        </md-dropdown-list>\r\n\r\n        <select v-el:field\r\n                v-model=\"value\"\r\n                v-bind-boolean:multiple=\"multiple\"\r\n                :placeholder=\"placeholder\" :id=\"id\"\r\n                :type=\"type\">\r\n            <option v-for=\"opt in options\" :value=\"opt.value\" v-bind-boolean:disabled=\"opt.disabled\">{{opt.content}}</option>\r\n        </select>\r\n    </div>\r\n    <label v-if=\"hasSlot('label')\" :for=\"id\" :class=\"labelClasses\">\r\n        <slot name=\"label\"></slot>\r\n    </label>\r\n</div>";
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3936,7 +4029,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            }
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(81)
+	        template: __webpack_require__(83)
 	    })], TextArea);
 	    return TextArea;
 	})();
@@ -3945,13 +4038,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-textarea input-field\">\r\n    <i v-if=\"hasSlot('icon-name')\" class=\"material-icons prefix\">\r\n        <slot name=\"icon-name\"></slot>\r\n    </i>\r\n    <textarea v-if=\"disabled\"\r\n              v-el:field\r\n              v-model=\"value\"\r\n              :name=\"name\"\r\n              :id=\"id\" class=\"materialize-textarea\"\r\n              :lazy=\"lazy\" :number=\"number\" :debounce=\"debounce\"\r\n              disabled=\"disabled\">\r\n    </textarea>\r\n    <textarea v-else\r\n              v-el:field\r\n              v-model=\"value\"\r\n              :name=\"name\"\r\n              :id=\"id\"\r\n              :lazy=\"lazy\" :number=\"number\" :debounce=\"debounce\"\r\n              @focus=\"activateField\"\r\n              @blur=\"deactivateField\"\r\n              @keyup=\"resize\"\r\n              class=\"materialize-textarea\">\r\n    </textarea>\r\n    <label v-if=\"hasSlot()\" :for=\"id\" :class=\"labelClasses\">\r\n        <slot></slot>\r\n    </label>\r\n</div>";
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3963,8 +4056,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(19);
-	var materialbox_1 = __webpack_require__(83);
-	var lean_overlay_1 = __webpack_require__(84);
+	var materialbox_1 = __webpack_require__(85);
+	var lean_overlay_1 = __webpack_require__(86);
 	var ESC = 27;
 	var Image = (function () {
 	    function Image() {}
@@ -4049,7 +4142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        components: {
 	            mdLeanOverlay: lean_overlay_1["default"]
 	        },
-	        template: __webpack_require__(86)
+	        template: __webpack_require__(88)
 	    })], Image);
 	    return Image;
 	})();
@@ -4058,7 +4151,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4195,7 +4288,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4210,7 +4303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var LeanOverlay = (function () {
 	    function LeanOverlay() {}
 	    LeanOverlay = __decorate([vue_class_component_1["default"]({
-	        template: __webpack_require__(85)
+	        template: __webpack_require__(87)
 	    })], LeanOverlay);
 	    return LeanOverlay;
 	})();
@@ -4219,19 +4312,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"lean-overlay\" style=\"z-index: 1002; display: block; opacity: 0.5;\"></div>";
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-image\">\r\n    <div v-el:placeholder class=\"material-placeholder\">\r\n        <img @click=\"toggle\" :height=\"height\" :width=\"width\"\r\n             v-el:img\r\n             class=\"materialboxed\"\r\n             :class=\"{active: active}\">\r\n    </div>\r\n\r\n    <md-lean-overlay v-if=\"active\" @click=\"toggle\" transition=\"modal-overlay\"></md-lean-overlay>\r\n    <div v-if=\"active && caption\" transition=\"fade\" class=\"caption-wrapper\">\r\n        <div class=\"materialbox-caption\" style=\"display: block\">\r\n            {{caption}}\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4266,7 +4359,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                twoWay: false
 	            }
 	        },
-	        template: __webpack_require__(88)
+	        template: __webpack_require__(90)
 	    })], LinearPreloader);
 	    return LinearPreloader;
 	})();
@@ -4275,13 +4368,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"progress\">\r\n    <div :class=\"{determinate: value != null, indeterminate: value == null}\" :style=\"computedStyle\"></div>\r\n</div>";
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4293,7 +4386,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return c > 3 && r && Object.defineProperty(target, key, r), r;
 	};
 	var vue_class_component_1 = __webpack_require__(19);
-	var lean_overlay_1 = __webpack_require__(84);
+	var lean_overlay_1 = __webpack_require__(86);
 	var ESC = 27;
 	var Modal = (function () {
 	    function Modal() {}
@@ -4416,7 +4509,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        },
-	        template: __webpack_require__(90)
+	        template: __webpack_require__(92)
 	    })], Modal);
 	    return Modal;
 	})();
@@ -4425,13 +4518,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-if=\"active\" :id=\"id\" :transition=\"transition\"\r\n     :style=\"computedStyle\" class=\"modal\" :class=\"computedClasses\">\r\n    <slot name=\"content\">\r\n        <div class=\"modal-content\">\r\n            <slot></slot>\r\n        </div>\r\n        <div class=\"modal-footer\">\r\n            <slot name=\"footer\"></slot>\r\n        </div>\r\n    </slot>\r\n</div>\r\n\r\n<md-lean-overlay v-if=\"active\" transition=\"modal-overlay\"\r\n                 @click=\"close\">\r\n</md-lean-overlay>";
 
 /***/ },
-/* 91 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4504,7 +4597,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        },
-	        template: __webpack_require__(92)
+	        template: __webpack_require__(94)
 	    })], NavItem);
 	    return NavItem;
 	})();
@@ -4513,13 +4606,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 92 */
+/* 94 */
 /***/ function(module, exports) {
 
 	module.exports = "<li @click=\"clicked\" :class=\"{active: active}\">\r\n    <slot name=\"content\">\r\n        <a :href=\"href\">\r\n            <slot></slot>\r\n        </a>\r\n    </slot>\r\n</li>";
 
 /***/ },
-/* 93 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4533,7 +4626,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var vue_class_component_1 = __webpack_require__(19);
 	var icon_1 = __webpack_require__(22);
 	var wave_effect_1 = __webpack_require__(8);
-	var utils_1 = __webpack_require__(59);
+	var utils_1 = __webpack_require__(61);
 	var Pagination = (function () {
 	    function Pagination() {}
 	    Object.defineProperty(Pagination.prototype, "pages", {
@@ -4640,7 +4733,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        },
-	        template: __webpack_require__(94)
+	        template: __webpack_require__(96)
 	    })], Pagination);
 	    return Pagination;
 	})();
@@ -4649,13 +4742,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports) {
 
 	module.exports = "<ul class=\"pagination\">\r\n    <li :class=\"{disabled: currentPage == 0}\">\r\n        <a v-if=\"firstLast\" @click.prevent=\"currentPage = 0\" href=\"#\"><i class=\"material-icons\">chevron_left</i></a>\r\n        <a @click.prevent=\"previousPage\" href=\"#\"><i class=\"material-icons\">chevron_left</i></a>\r\n    </li>\r\n\r\n    <li v-for=\"n in pager\"\r\n        @click.prevent=\"setCurrentPage(n)\"\r\n        :class=\"getClasses(n)\" v-wave-effect>\r\n        <a @click.prevent href=\"#\">{{n + 1}}</a>\r\n    </li>\r\n\r\n    <li :class=\"{disabled: currentPage == pages - 1}\">\r\n        <a @click.prevent=\"nextPage\" href=\"#\"><i class=\"material-icons\">chevron_right</i></a>\r\n        <a v-if=\"firstLast\" @click.prevent=\"currentPage = pages - 1\" href=\"#\"><i class=\"material-icons\">chevron_right</i></a>\r\n    </li>\r\n</ul>\r\n";
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4730,7 +4823,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this._setClasses(val);
 	            }
 	        },
-	        template: __webpack_require__(96)
+	        template: __webpack_require__(98)
 	    })], Slide);
 	    return Slide;
 	})();
@@ -4739,13 +4832,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports) {
 
 	module.exports = "<li :class=\"computedClasses\">\r\n    <img v-el:img>\r\n    <div class=\"caption\" :class=\"align + '-align'\">\r\n        <slot></slot>\r\n    </div>\r\n</li>";
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4799,7 +4892,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                return value > 1000;
 	            }
 	        },
-	        template: __webpack_require__(98)
+	        template: __webpack_require__(100)
 	    })], Slider);
 	    return Slider;
 	})();
@@ -4808,13 +4901,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"slider\">\r\n    <ul class=\"slides\">\r\n        <slot></slot>\r\n    </ul>\r\n    <ul class=\"indicators\">\r\n        <li v-for=\"index in itemsCount\"\r\n            @click=\"setActive(index)\"\r\n            @mouseover=\"activeItem == index && clearInterval(index)\"\r\n            @mouseout=\"setupInterval(index)\"\r\n            :class=\"{active: activeItem == index}\" class=\"indicator-item\"></li>\r\n    </ul>\r\n</div>";
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4853,7 +4946,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            bindBoolean: bind_boolean_1["default"]
 	        },
 	        mixins: [input_1["default"]],
-	        template: __webpack_require__(100)
+	        template: __webpack_require__(102)
 	    })], Switch);
 	    return Switch;
 	})();
@@ -4862,13 +4955,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"switch\">\r\n    <label>\r\n        <slot name=\"off\">Off</slot>\r\n        <input v-model=\"value\"\r\n               v-bind-boolean:disabled=\"disabled\"\r\n               :name=\"name\"\r\n               type=\"checkbox\">\r\n        <span class=\"lever\"></span>\r\n        <slot name=\"on\">On</slot>\r\n    </label>\r\n</div>";
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4948,7 +5041,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this.select(id);
 	            }
 	        },
-	        template: __webpack_require__(102)
+	        template: __webpack_require__(104)
 	    })], Tab);
 	    return Tab;
 	})();
@@ -4957,13 +5050,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = "<li @click=\"setAsSelected\" class=\"tab col\" :class=\"computedClasses\">\r\n    <slot></slot>\r\n</li>";
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5051,7 +5144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                this.select(tab);
 	            }
 	        },
-	        template: __webpack_require__(104)
+	        template: __webpack_require__(106)
 	    })], Tabs);
 	    return Tabs;
 	})();
@@ -5060,13 +5153,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	//# sourceMappingURL=index.js.map
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"md-tabs\">\r\n    <ul class=\"tabs\">\r\n        <slot></slot>\r\n        <div v-el:indicator class=\"indicator\"></div>\r\n    </ul>\r\n\r\n    <slot name=\"contents\"></slot>\r\n</div>\r\n";
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

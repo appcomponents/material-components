@@ -6,6 +6,7 @@ import mixins from '../mixins';
 
 import mdBadge from './badge';
 import mdButton from './button';
+import mdBtn from './btn';
 import mdBreadcrumbs from './breadcrumbs';
 import mdCard from './card';
 import mdCheckbox from './form/checkbox';
@@ -52,6 +53,7 @@ require('./main.scss');
 const VueMaterializeComponents: any = {
     mdBadge,
     mdButton,
+    mdBtn,
     mdBreadcrumbs,
     mdCard,
     mdCheckbox,
