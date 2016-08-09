@@ -56,9 +56,12 @@ export default class Tabs {
         this.active = tab.id;
         var target = tab.$el;
         var parent = target.parentElement;
+        var indicator = this.$els.indicator;
+        var indicatorLeft = parseInt(indicator.style.left, 10) || this.indicator.left;
+        var indicatorRight = parseInt(indicator.style.right, 10) || this.indicator.right;
         this.moveIndicator(
-            this.indicator.left, target.offsetLeft,
-            this.indicator.right, parent.offsetWidth - target.offsetLeft - target.offsetWidth);
+            indicatorLeft, target.offsetLeft,
+            indicatorRight, parent.offsetWidth - target.offsetLeft - target.offsetWidth);
         return true;
     }
 
