@@ -93,12 +93,16 @@ export default class SelectField {
     }
 
     createOption(option: any) {
-        var content = option.content;
+        var content = option.content.textContent;
+        if(option._scope)
+        {
+            content = option._scope.$interpolate(content)
+        }
         var value = option.value;
         var disabled = option.disabled;
 
         return {
-            content: content.textContent,
+            content: content,
             value: value,
             disabled: disabled
         };
