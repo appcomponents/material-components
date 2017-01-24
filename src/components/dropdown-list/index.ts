@@ -56,14 +56,10 @@ export default class DropdownList {
     computeStyle(element: HTMLElement) {
         var offset = Utils.getOffset(element);
         var width = element.offsetWidth || 100;
-        var top = offset.top  || 0;
-        var left = offset.left  || 0;
 
         return {
             width: width + 'px',
             position: 'absolute',
-            top: top + 'px',
-            left: left + 'px',
             opacity: 1,
             display: 'block'
         };
